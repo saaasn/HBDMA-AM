@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Payment Details</title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+    <div class="window">
+        <div class="header">
+            <span class="title">OUR G░I░F░T TO YOU!</span>
+            <button class="close-btn" onclick="window.close()">✖</button>
+        </div>
+        <div class="content">
+            <!-- Image added here -->
+            <img src="catcoding.jpg" alt="Image" class="payment-image">
+
+            <form onsubmit="validateBirthday(event)">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" value="1234 5678 9012 3456" readonly>
+                <label for="name">Name on Card:</label>
+                <input type="text" id="name" name="name" value="Arlhene S. Lictawa" readonly>
+                <label for="birthday">Birthday (DD/MM):</label>
+                <input type="text" id="birthday" name="birthday" placeholder="Enter birthday" required>
+                <button type="submit">Proceed</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="overlay">
+        <div class="alert-box">
+            <!-- Place your GIF here -->
+            <img src="nugu.gif" alt="Alert GIF">
+        </div>
+    </div>
+
+    <script>
+        function validateBirthday(event) {
+            event.preventDefault();
+            var birthday = document.getElementById('birthday').value;
+            if (birthday === '07/03') {
+                window.location.href = 'page4.html';
+            } else {
+                document.getElementById('overlay').style.display = 'block';
+            }
+        }
+
+        document.getElementById('overlay').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Basic styling for window and header */
+.window {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 50px auto;
+}
+
+.header {
+    background-color: #ff1818; /* Neon pink color */
+    color: #b55400;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-family: Courier New;
+    font-weight: bold;
+    /* Styling for the title if needed */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Styling for content area */
+.content {
+    padding: 20px;
+}
+
+/* Styling for greeting message */
+h1 {
+    font-family: Georgia;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial;
+}
+
+p {
+    margin-bottom: 10px;
+    font-family: Arial;
+}
+
+/* Styling for signature */
+.content p:last-child {
+    font-style: italic;
+    font-weight: bold;
+}
